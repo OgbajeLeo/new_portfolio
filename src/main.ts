@@ -4,6 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import './main.css'
+import "animate.css";
 import '@fortawesome/fontawesome-free/css/all.css';
 
 
