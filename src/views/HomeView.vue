@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+
     <Navbar class="relative" />
 
     <section class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto  flex flex-col justify-center items-center">
@@ -25,11 +25,11 @@
           >
             <div class="">Currently open to work. ☁️</div>
           </div> -->
-          <div
-            class="bg-primary-gray cursor-pointer rounded-md text-lg font-bold text-[#333] py-3 px-6 mt-4 w-fit hover:shadow-md hover:scale-105"
+          <router-link to="/contact"
+            class="bg-primary-gray cursor-pointer rounded-[30px] text-lg font-bold text-[#333] py-3 px-6 mt-4 w-fit hover:shadow-md hover:scale-105"
           >
             Get in Touch
-          </div>
+          </router-link>
         </div>
         <div class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center">
           <img src="../../public/img/profile.svg" alt="png" class="max-w-[370px] max-h-[300px]"/>
@@ -50,11 +50,13 @@
       <ProjectComp />
       
     </section>
-  </div>
+
+  <Footer />
 </template>
 
 <script setup lang="ts">
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
 import { ref } from "vue";
 

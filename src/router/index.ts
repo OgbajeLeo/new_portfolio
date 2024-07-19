@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from '@/views/AboutView.vue';
 import ProjectView from '@/views/ProjectView.vue';
 import ResumeView from '@/views/ResumeView.vue';
+import ContactView from '@/views/ContactView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,9 +27,14 @@ const routes: Array<RouteRecordRaw> = [
     component: ResumeView,
   },
   {
+    path: "/contact",
+    name: "contact",
+    component: ContactView,
+  },
+  {
     path: "/:catchAll(.*)",
-    name: "Not Found",
-    component: () => import("@/views/AboutView.vue"),
+    name: "NotFound",
+    component: () => import("@/views/NotFound.vue"),
   },
 ];
 

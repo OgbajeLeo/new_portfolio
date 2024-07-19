@@ -18,8 +18,9 @@
     <router-link to="/" class="nav-link" :class="currentRoutePath=='/'? 'font-bold text-black':''">Home</router-link>
     <router-link to="/about" class="nav-link" :class="currentRoutePath=='/about'? 'font-bold text-black':''">About</router-link>
     <router-link to="/projects" class="nav-link" :class="currentRoutePath=='/projects'? 'font-bold text-black':''">Projects</router-link>
-    <a href="/resume" class="nav-link" :class="currentRoutePath=='/resume'? 'font-bold text-black':''">Resume</a>
-    <a  @click="showModal = !showModal" class="nav-link">Contact</a>
+    <router-link to="/resume" class="nav-link" :class="currentRoutePath=='/resume'? 'font-bold text-black':''">Resume</router-link>
+    <router-link to="/contact" class="nav-link" :class="currentRoutePath=='/contact'? 'font-bold text-black':''">Contact</router-link>
+
   </div>
   
   
@@ -39,7 +40,7 @@
     <router-link @click="closeMenu" to="/about" class="">About</router-link>
     <router-link @click="closeMenu" to="/projects" class="">Projects</router-link>
     <router-link @click="closeMenu" to="/resume" class="">Resume</router-link>
-    <a @click="closeMenu" href="#projects">Contact</a>
+    <a @click="closeMenu" href="/contact">Contact</a>
 
     <div class="flex justify-center pt-6 lg:hidden animate__backInUp animate__animated animate__bounce"
     >
@@ -47,7 +48,7 @@
         <div class="hover:ring-2 hover:ring-slate-400 hover:bg-slate-100 hover:scale-125 sm:mt-[-8px] mr-4 size-8 bg-white rounded-full flex justify-center items-center"><a class="p-3" href="https://github.com/ogbajeleo"><i class="fa-brands fa-github fa-lg" style="color: #3e3e3e;"></i></a></div>
         <div class="hover:ring-2 hover:ring-slate-400 hover:bg-slate-100 hover:scale-125 sm:mt-[-16px] mr-4 size-8 bg-white rounded-full flex justify-center items-center"><a class="p-3" href="https://twitter.com/omaebije"><i class="fa-brands fa-x-twitter fa-lg" style="color: #3e3e3e;"></i></a></div>
         <div class="hover:ring-2 hover:ring-slate-400 hover:bg-slate-100 hover:scale-125 sm:mt-[-8px] mr-4 size-8 bg-white rounded-full flex justify-center items-center"><a class="p-3" href="https://wa.me/+2349036787860"><i class="fa-brands fa-whatsapp fa-lg" style="color: #3e3e3e;"></i></a></div>
-        <div class="hover:ring-2 hover:ring-slate-400 hover:bg-slate-100 hover:scale-125 size-8 bg-white rounded-full flex justify-center items-center"><a class="p-5" href="http://mailto:leonardaromeh@gmail.com"><i class="fa-regular fa-envelope fa-lg" style="color: #3e3e3e;"></i></a></div>
+        <div class="hover:ring-2 hover:ring-slate-400 hover:bg-slate-100 hover:scale-125 size-8 bg-white rounded-full flex justify-center items-center"><a class="p-5" href="mailto:leonardaromeh@gmail.com"><i class="fa-regular fa-envelope fa-lg" style="color: #3e3e3e;"></i></a></div>
     </div>
 </div>
 </div>
@@ -63,7 +64,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
     const currentRoutePath = ref<string>(route.path);
-console.log(currentRoutePath);
+
     // Watch for route changes
     watch(route, (to, from) => {
       currentRoutePath.value = to.path;

@@ -5,8 +5,8 @@
       <div class="text-center mb-4 bg-secondary-gray py-4">
         <h1 class="sm:text-7xl text-4xl font-bold mt-6">{{ fullName }}</h1>
         <div class="flex justify-center items-center gap-4 mt-2">
-          <a href="/static/media/resume.a4a25eac3e6a4a255311.pdf" class=" w-fit px-6 py-2.5 my-2 flex gap-4 items-center border-2 hover:shadow-lg hover:scale-105 rounded-[30px] cursor-pointer" download="" target="_blank" rel="noreferrer">Resume<span class="group-hover:rotate-270 duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <a href="../../public/OGBAJE LEO A.pdf" class=" w-fit px-6 py-2.5 my-2 flex gap-4 items-center border-2 hover:shadow-lg hover:scale-105 rounded-[30px] cursor-pointer" download="ogbajeleo" target="_blank" rel="noopener noreferrer">Resume<span class="group-hover:rotate-270 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
               
@@ -40,14 +40,24 @@
         <div class="py-4" v-for="experience in experiences" :key="experience.company">
           <h3 class="text-2xl font-bold">{{ experience.company }} </h3>
           <h3 class="text-lg font-semibold">{{ experience.position }} </h3>
-
+          
           <p class="text-lg font-medium">{{ experience.duration }}</p>
           <ul class="list-disc list-inside px-3 ">
             <li v-for="point in experience.highlights" :key="point">{{ point }}</li>
           </ul>
         </div>
+    </div>
+    
+    <div class="mb-6">
+        <h2 class="text-2xl font-bold mb-2">Strength</h2>
+        <h3 class="text-xl font-semibold ">Leadership </h3>
+        <p>{{ strength.leadership }}</p>
+        <h3 class="text-xl font-semibold mt-2">Problem Solving </h3>
+        <p>{{ strength.problem }}</p>
+        <h3 class="text-xl font-semibold mt-2">Collaboration </h3>
+        <p>{{ strength.collaboration }}</p>
       </div>
-  
+
       <div class="mb-6">
         <h2 class="text-2xl font-bold mb-2">Education</h2>
         <p>{{ education }}</p>
@@ -59,11 +69,16 @@
 
       </div>
     </div>
-  </template>
+    <Footer />
 
+  </template>
+  
   <script setup lang="ts">
 import { ref } from 'vue';
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+
+import OGBAJE from '@/assets'
 
  const fullName = ref('Ogbaje Leo Arome');
     const jobTitle = ref('Frontend Developer');
@@ -97,7 +112,31 @@ import Navbar from "@/components/Navbar.vue";
       
     ]);
     const education = ref(`Federal Polytechnic Idah — HND, Computer Science (2019-2022)`);
+    const strength = ref({
+        leadership: "Led a team of developers and successfully delivered multiple projects on time and within budget.",
+       problem: "Identified and resolved complex technical issues resulting in improved application performance.",
+       collaboration: "Worked closely with cross-functional teams to gather requirements and ensure successful project implementation.",
+    })
 
+
+
+    const downloadPDF = () => {
+  fetch(pdfFile)
+    .then(response => response.blob())
+    .then(blob => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'myfile.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+    .catch(error => {
+      console.error('Error downloading PDF:', error);
+      // Handle error (e.g., show error message to user)
+    });
+};
 </script>
 
 

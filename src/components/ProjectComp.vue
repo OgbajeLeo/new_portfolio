@@ -11,14 +11,14 @@
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="w-fit rounded-md overflow-hidden border"
+          class="w-fit rounded-md overflow-hidden border shadow-lg"
         >
           <img
             :src="card.image"
             alt="Card Image"
-            class="card-image w-full h-80 object-cover border rounded-t-md hover:bg-opacity-50 hover:backdrop-blur-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:filter hover:blur-lg"
+            class="card-image w-full h-80 lg:object-cover object-fill border rounded-t-md hover:scale-105"
           />
-          <div class="p-4 mt-6">
+          <div class="p-4 pt-6">
             <h2 class="sm:text-xl text-base font-bold mb-2 h-8">{{ card.title }}</h2>
             
             
@@ -30,7 +30,7 @@
 
             <div class="flex justify-between border-b-2 pb-6 items-center text-[#ccc]">
               <div
-                class="flex justify-start gap-3 items-center border shadow-md hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm"
+                class="flex justify-start gap-3 items-center border  shadow-md shadow-[#333] hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
               >
                 <a :href="card.github" class="">Github</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-3">
@@ -39,7 +39,7 @@
                 
               </div>
               <div
-                class="flex justify-start gap-3 items-center border shadow-md hover:shadow-none  bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm"
+                class="flex justify-start gap-3 items-center border shadow-[#333] shadow-md hover:shadow-none  bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
               >
                 <a :href="card.live" class="">Live</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-3">
@@ -69,30 +69,39 @@ interface Card {
 const cards = [
   {
     image:
-      "https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/644196fed9615418abe95e1f_home-depot-internship-thumbnail-p-1080.jpg",
-    title: "The Orangeworks",
+      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401253/JCIASO_bqbvrk.png",
+    title: "JCI ASO",
     description:
-      "Develop and implement engaging lesson plans in accordance with the school's curriculum guidelines and educational standards.",
-    github: "",
-    live: "Button 2",
+      " Collaborating with other developers to build the official website for JCI ASO is an exciting project aimed at creating a dynamic and engaging online presence for the organization. JCI, or Junior Chamber International",
+    github: "/",
+    live: "https://jciaso.vercel.app/",
   },
   {
     image:
-      "https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/644196fed9615418abe95e1f_home-depot-internship-thumbnail-p-1080.jpg",
+      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401252/ImageCropper_ecgfiu.png",
     title: "Image Cropper ",
     description:
-      "Develop and curriculum guidelines and educationstandards.Foster a positive and inclusive classroom environment that Develop and implement engaging lesson plans in accordance with the school's",
-    github: "Button 1",
-    live: "Button 2",
+      "Image Cropper project empowers users to effortlessly upload, resize, crop, and download their images with precision and ease. Whether you're a photographer, designer, or simply someone looking to customize images for personal use, this tool offers intuitive features to enhance your editing experience.",
+    github: "https://github.com/OgbajeLeo/ImageCropper",
+    live: "https://croper-gamma.vercel.app/",
   },
   {
     image:
-      "https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/644196fed9615418abe95e1f_home-depot-internship-thumbnail-p-1080.jpg",
-    title: "Image Cropper ",
+      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401975/TODOO_y0rovi.png",
+    title: "Todoify ",
     description:
-      "Develop and curriculum guidelines and educationstandards.Foster a positive and inclusive classroom environment that Develop and implement engaging lesson plans in accordance with the school's",
-    github: "Button 1",
-    live: "Button 2",
+      "TODOIFY is a todo application that harnesses the power of LocalStorage to offer users seamless task management with all CRUD operations directly within their browser. Users can effortlessly create new tasks, Mark as done, and add task descriptions.",
+    github: "https://github.com/OgbajeLeo/todoify-vue",
+    live: "https://todoify-vue.vercel.app/",
+  },
+  {
+    image:
+      "https://divineeffiong.vercel.app/asset/works.png/INSURE.png",
+    title: "INsure ",
+    description:
+      "INsure is a comprehensive insurance sale management tool designed to empower insurance agents in efficiently managing and tracking leads throughout the sales process. Developed in collaboration with skilled developers,",
+    github: "/",
+    live: "https://insure-personal-git-alice-home-alice2212.vercel.app/",
   },
 ];
 </script>

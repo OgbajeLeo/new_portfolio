@@ -10,12 +10,18 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@vue/reactivity": "^3.4.33",
     "animate.css": "^4.1.1",
     "core-js": "^3.8.3",
+    "emailjs-com": "^3.2.0",
     "register-service-worker": "^1.7.2",
+    "sweetalert2": "^11.12.3",
+    "vee-validate": "^4.13.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "yup": "^1.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
