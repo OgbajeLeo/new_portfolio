@@ -4,7 +4,7 @@
 
     <section class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto  flex flex-col justify-center items-center">
       <div
-        class="flex lg:flex-row flex-col lg:justify-center justify-center min-h-[90vh] items-center gap-8 md:space-x-8 -mt-10"
+        class="flex lg:flex-row flex-col lg:justify-center justify-center min-h-[90vh] items-center gap-8 md:space-x-8 md:mt-0 mt-12"
       >
         <div
           class="lg:w-1/2 w-full lg:text-left text-center flex flex-col lg:justify-start justify-center lg:items-start items-center"
@@ -31,7 +31,7 @@
             Get in Touch
           </router-link>
         </div>
-        <div class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center">
+        <div class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center bounce">
           <img src="../../public/img/profile.svg" alt="png" class="max-w-[370px] max-h-[300px]"/>
         </div>
       </div>
@@ -47,6 +47,7 @@
 
       <div class="border w-full my-4"></div>
 
+      <TechStack />
       <ProjectComp />
       
     </section>
@@ -57,6 +58,7 @@
 <script setup lang="ts">
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
+import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
 import { ref } from "vue";
 

@@ -1,23 +1,30 @@
 <template>
     <div>
     <Navbar />
+
+    <button @click="goBack" class="flex items-center justify-start gap-3 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] mx-auto font-semibold w-full md:text-base text-sm mt-4 md:hidden">
+      <svg class="size-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Go Back</span>
+    </button>
     <section class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto mb-10">
         
         <div id="project" class="flex flex-col justify-center items-center">
-            <h1 class="lg:text-7xl text-4xl font-black text-center mt-12 ojuju text-[#555]">
+            <h1 class="lg:text-7xl text-4xl font-black text-center my-12 text-[#555]">
        
        Get in Touch
     </h1>
-    <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help?</p>
+    <p class="text-sm md:text-base text-gray-500 mt-4">Have some big idea or brand to develop and need help?</p>
   </div>
     <div class="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif]">
     
 
-        <div class="grid lg:grid-cols-3 items-start gap-4 border p-2  shadow-md shadow-[#333] rounded-lg mt-12">
+        <div class="grid lg:grid-cols-3 items-start gap-4 border p-2  shadow-md border-[#333] rounded-lg mt-12">
 
             <div class="lg:block hidden bg-[#333] text-white rounded-lg p-6 h-full max-lg:order-1">
                 <h2 class="text-xl font-semibold ">Contact Information</h2>
-                <p class="text-sm  mt-4">Have some big idea or brand to develop and need help?</p>
+                <p class="text-sm md:text-base mt-4">Have some big idea or brand to develop and need help?</p>
 
                 <ul class="mt-16 space-y-8">
                     <li class="flex items-center">
@@ -178,6 +185,17 @@ import * as yup from "yup";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goBack = () => {
+  if (router.currentRoute.value.fullPath !== '/') {
+    router.back()
+  } else {
+    router.push('/')
+  }
+}
 
 
 const isLoading = ref(false)

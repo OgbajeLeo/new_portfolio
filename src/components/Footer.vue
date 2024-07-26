@@ -1,6 +1,6 @@
 <template>
     <!--Footer container-->
-<footer class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
+<footer class="flex flex-col items-center bg-zinc-50 text-center text-surface">
 <div class="container pt-3 border-t-2 mt-4">
   <!-- Social media icons container -->
   <div class="flex justify-center pt-6  gap-8 pb-10"
@@ -15,8 +15,8 @@
 
 <!--Copyright section-->
 <div class="w-full bg-black/5 p-4 text-center">
-  © {{ year }} Built with Love ❤
-  <a href="https://tw-elements.com/"></a>
+  © {{ year }} 
+  <a href="https:linkedin.com/in/ogbajeleo">Ogbaje Leo Arome</a>
 </div>
 </footer>
 </template>
