@@ -17,6 +17,7 @@
 <div id="nav" class="hidden lg:flex justify-between items-center xl:space-x-[40px] text-[#757474] space-x-8  text-base font-[400] cursor-pointer">
     <router-link to="/" class="nav-link" :class="currentRoutePath=='/'? 'font-bold text-black':''">Home</router-link>
     <!-- <router-link to="/about" class="nav-link" :class="currentRoutePath=='/about'? 'font-bold text-black':''">About</router-link> -->
+    <!-- checks -->
     <router-link to="/projects" class="nav-link" :class="currentRoutePath=='/projects'? 'font-bold text-black':''">Projects</router-link>
     <router-link to="/resume" class="nav-link" :class="currentRoutePath=='/resume'? 'font-bold text-black':''">Resume</router-link>
     <router-link to="/contact" class="nav-link" :class="currentRoutePath=='/contact'? 'font-bold text-black':''">Contact</router-link>
