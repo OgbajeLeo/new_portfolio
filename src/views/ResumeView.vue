@@ -10,7 +10,7 @@
       <div class="text-center mb-4 bg-secondary-gray py-4">
         <h1 class="sm:text-7xl text-4xl font-bold mt-6">{{ fullName }}</h1>
         <div class="flex justify-center items-center gap-4 mt-2">
-          <a href="../../public/OGBAJE LEO A.pdf" class=" w-fit px-6 py-2.5 my-2 flex gap-4 items-center border-2 hover:shadow-lg hover:scale-105 rounded-[30px] cursor-pointer" download="ogbajeleo" target="_blank" rel="noopener noreferrer">Resume<span class="group-hover:rotate-270 duration-300">
+          <a href="../assets/OGBAJE LEO A.pdf" class=" w-[170px] lg:h-[48px] h-[38px] my-2  flex gap-4 justify-center   items-center border-2 hover:shadow-lg hover:scale-105 rounded-[30px] cursor-pointer" download="ogbajeleo" target="_blank" rel="noopener noreferrer">Resume<span class="group-hover:rotate-270 duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
