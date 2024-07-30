@@ -26,7 +26,7 @@
             <div class="">Currently open to work. ☁️</div>
           </div> -->
           <router-link to="/contact"
-            class="bg-primary-gray cursor-pointer rounded-[30px] text-lg font-bold text-[#333] py-3 px-6 mt-4 w-fit hover:shadow-md hover:scale-105"
+            class="bg-primary-gray cursor-pointer rounded-[30px] text-lg font-bold text-[#333] py-2 px-12 mt-4 w-fit hover:shadow-md hover:scale-105"
           >
             Get in Touch
           </router-link>

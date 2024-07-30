@@ -22,7 +22,7 @@
             <h2 class="sm:text-xl text-base font-bold mb-2 h-8">{{ card.title }}</h2>
             
             
-            <p class="font-light text-[#555] sm:text-base text-sm mb-4 pb-6 h-32">
+            <p class="font-light text-[#555] sm:text-base text-sm mb-4 pb-6 lg:h-32 h-36">
               {{ card.description }}
              
             </p>
