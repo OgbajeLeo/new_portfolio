@@ -81,9 +81,7 @@
   <script setup lang="ts">
 import { ref } from 'vue';
 import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
-
-import OGBAJE from '@/assets'
+import Footer from "@/components/Footer.vue";  
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -137,23 +135,6 @@ const goBack = () => {
 
 
 
-    const downloadPDF = () => {
-  fetch(pdfFile)
-    .then(response => response.blob())
-    .then(blob => {
-      const url = window.URL.createObjectURL(new Blob([blob]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'myfile.pdf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    })
-    .catch(error => {
-      console.error('Error downloading PDF:', error);
-      // Handle error (e.g., show error message to user)
-    });
-};
 </script>
 
 
