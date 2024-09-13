@@ -7,7 +7,7 @@
     </h1>
   </div>
 
-    <div class="card-grid grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+    <div class="card-grid grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 ">
         <div
           v-for="(card, index) in cards"
           :key="index"
@@ -22,7 +22,7 @@
             <h2 class="sm:text-xl text-base font-bold mb-2 h-8">{{ card.title }}</h2>
             
             
-            <p class="font-light text-[#555] sm:text-base text-sm mb-4 pb-6 lg:h-32 h-36">
+            <p class="font-light text-[#555] sm:text-base text-sm mb-4 pb-6 lg:h-32 md:h-48 h-36">
               {{ card.description }}
              
             </p>
@@ -124,3 +124,11 @@ const cards = [
   },
 ];
 </script>
+
+<style scoped>
+#project:target{
+  background-color: #f7f7f7;
+  transition: background-color 0.5s ease-in-out;
+  color:red;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div id="project" class="flex justify-center items-center">
+    <div id="" class="flex justify-center items-center">
         <h1 class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12  text-[#555]">
            
             Tech Stack / Skills

@@ -4,15 +4,15 @@
 
     <section class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto  flex flex-col justify-center items-center">
       <div
-        class="flex lg:flex-row flex-col lg:justify-center justify-center min-h-[90vh] items-center gap-8 md:space-x-8 md:mt-0 mt-12"
+        class="flex lg:flex-row flex-col lg:justify-center justify-center min-h-[90vh] items-center gap-8 space-y-8 md:space-x-8 md:mt-0 mt-12"
       >
         <div
           class="lg:w-1/2 w-full lg:text-left text-center flex flex-col lg:justify-start justify-center lg:items-start items-center"
         >
-          <h2 class="sm:text-[48px] text-[28px] font-bold text-[#333]">
+          <h2 class="sm:text-[38px] text-[28px] font-bold text-[#333]">
             Hello, I'm Leo ッ
           </h2>
-          <h2 class="sm:text-[48px] text-[28px] font-bold text-[#333]">
+          <h2 class="sm:text-[54px] text-[28px] font-bold text-[#333]">
             Frontend Developer
           </h2>
           <p class="text-lg mt-4 text-[#56555e]">
@@ -26,13 +26,13 @@
             <div class="">Currently open to work. ☁️</div>
           </div> -->
           <router-link to="/contact"
-            class="bg-primary-gray cursor-pointer rounded-[30px] text-lg font-bold text-[#333] py-2 px-12 mt-4 w-fit hover:shadow-md hover:scale-105"
+            class="bg-primary-gray cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#333] py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105"
           >
             Get in Touch
           </router-link>
         </div>
         <div class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center bounce">
-          <img src="../../public/img/profile.svg" alt="png" class="max-w-[370px] max-h-[300px]"/>
+          <img src="../../public/img/profile.svg" alt="png" class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]"/>
         </div>
       </div>
 
@@ -54,8 +54,8 @@
            
           What I do?
       </h1>
-        <div class="flex flex-col gap-6 sm:flex-row sm:gap-6 sm:justify-center">
-          <!-- Loop through services array -->
+        <div class="flex flex-col gap-6 lg:flex-row sm:gap-6 sm:justify-center">
+
           <div
             v-for="service in services"
             :key="service.id"
@@ -90,6 +90,7 @@
 
       <TechStack />
       <ProjectComp />
+      <ContactForm />
       
     </section>
 
@@ -99,6 +100,7 @@
 <script setup lang="ts">
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
+import ContactForm from "@/components/ContactForm.vue";
 import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
 import { ref } from "vue";
@@ -115,8 +117,8 @@ const services = ref([
   },
   {
     id: 2,
-    description: 'I provide timely and effective technical support to clients or end-users. Identifying and resolving software or hardware issues, troubleshooting network problems, and providing guidance and instructions to users.',
-    title: 'IT Support',
+    description: 'Websites require regular updates and maintenance to stay current and secure. I offer ongoing support to keep your site in top shape, address any issues that arise, and make necessary updates to ensure it continues to meet your evolving needs.',
+    title: 'Maintenance and Support',
     iconComponent: ItIcon,
   },
   {
