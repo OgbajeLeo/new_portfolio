@@ -46,6 +46,47 @@
     </a>
 
       <div class="border w-full my-4"></div>
+      
+
+
+      <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+        <h1 class="lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12  text-[#555]">
+           
+          What I do?
+      </h1>
+        <div class="flex flex-col gap-6 sm:flex-row sm:gap-6 sm:justify-center">
+          <!-- Loop through services array -->
+          <div
+            v-for="service in services"
+            :key="service.id"
+            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:max-w-sm sm:rounded-lg sm:px-10"
+          >
+            <span
+              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#3F3D56] transition-all duration-300 group-hover:scale-[10]"
+            ></span>
+            <div class="relative z-10 mx-auto max-w-md">
+              <span
+            class="grid h-20 w-20 place-items-center rounded-full bg-[#3F3D56] transition-all duration-300 group-hover:bg-gray-800"
+          >
+
+            <component :is="service.iconComponent" class="h-10 w-10 text-white transition-all"/>
+          </span>
+          <div class="pt-5 text-xl font-semibold leading-7">
+            <p class="group-hover:text-white/90">
+              
+              {{ service.title }}
+             
+            </p>
+          </div>
+              <div
+                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90"
+              >
+                <p>{{ service.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <TechStack />
       <ProjectComp />
@@ -61,10 +102,33 @@ import Footer from "@/components/Footer.vue";
 import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
 import { ref } from "vue";
+import CodeIcon from "@/components/IconComp/CodeIcon.vue"
+import ItIcon from "@/components/IconComp/ItIcon.vue"
+import DesignIcon from "@/components/IconComp/DesignIcon.vue"
 
-
+const services = ref([
+  {
+    id: 1,
+    description: 'I create web applications or websites that are functional, responsive, and user-friendly. Understanding client requirements, developing the necessary features and functionality, and ensuring the site is optimized for performance.',
+    title: 'Web Design & Development',
+    iconComponent: CodeIcon,
+  },
+  {
+    id: 2,
+    description: 'I provide timely and effective technical support to clients or end-users. Identifying and resolving software or hardware issues, troubleshooting network problems, and providing guidance and instructions to users.',
+    title: 'IT Support',
+    iconComponent: ItIcon,
+  },
+  {
+    id: 3,
+    description: 'I create visually appealing and intuitive user interfaces. Designing wireframes, prototypes, and mockups, selecting appropriate color schemes and typography, and ensuring consistency and usability across different devices.',
+    title: 'UI / UX Design',
+    iconComponent: DesignIcon,
+  }
+]);
 </script>
 
 <style scoped>
+
 
 </style>

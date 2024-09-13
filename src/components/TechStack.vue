@@ -30,12 +30,12 @@
     { name: 'Figma', logo: 'https://cdn.iconscout.com/icon/free/png-512/free-figma-3521426-2944870.png' },
     { name: 'Notion', logo: 'https://cdn.iconscout.com/icon/free/png-512/free-notion-10516019-8630396.png' },
     { name: 'Trello', logo: 'https://cdn.iconscout.com/icon/free/png-512/free-trello-226534.png' },
-    // Add more tech here if needed
+    
   ]
   </script>
   
   <style scoped>
-  /* Add custom styles if needed */
+  
   #stack {
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
