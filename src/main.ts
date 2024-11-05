@@ -5,6 +5,8 @@ import router from "./router";
 import store from "./store";
 import './main.css'
 import "animate.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 

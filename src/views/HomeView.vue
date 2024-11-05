@@ -9,10 +9,10 @@
         <div
           class="lg:w-1/2 w-full lg:text-left text-center flex flex-col lg:justify-start justify-center lg:items-start items-center"
         >
-          <h2 class="sm:text-[38px] text-[28px] font-bold text-[#333]">
+          <h2 class="sm:text-[38px] text-[28px] font-bold text-[#163537]">
             Hello, I'm Leo ッ
           </h2>
-          <h2 class="sm:text-[54px] text-[28px] font-bold text-[#333]">
+          <h2 class="sm:text-[54px] text-[28px] font-bold text-[#163537]">
             Frontend Developer
           </h2>
           <p class="text-lg mt-4 text-[#56555e]">
@@ -21,12 +21,12 @@
           </p>
 
           <!-- <div
-            class="bg-secondary-gray rounded-md py-3 px-6 mt-4 text-[#333] w-full"
+            class="bg-secondary-gray rounded-md py-3 px-6 mt-4 text-[#163537] w-full"
           >
             <div class="">Currently open to work. ☁️</div>
           </div> -->
           <router-link to="/contact"
-            class="bg-primary-gray cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#333] py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105"
+            class="bg-primary-gray cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#163537] py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105"
           >
             Get in Touch
           </router-link>
@@ -49,24 +49,24 @@
       
 
 
-      <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-        <h1 class="lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12  text-[#555]">
+      <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+        <h1 class="lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12  text-[#163537]">
            
           What I do?
       </h1>
-        <div class="flex flex-col gap-6 lg:flex-row sm:gap-6 sm:justify-center">
+        <div class="flex flex-col gap-6 lg:flex-row sm:gap-6 sm:justify-center px-4">
 
           <div
             v-for="service in services"
             :key="service.id"
-            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:max-w-sm sm:rounded-lg sm:px-10"
+            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-[#163537] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:max-w-sm sm:rounded-lg sm:px-10"
           >
             <span
-              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#3F3D56] transition-all duration-300 group-hover:scale-[10]"
+              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#163537] transition-all duration-300 group-hover:scale-[10]"
             ></span>
             <div class="relative z-10 mx-auto max-w-md">
               <span
-            class="grid h-20 w-20 place-items-center rounded-full bg-[#3F3D56] transition-all duration-300 group-hover:bg-gray-800"
+            class="grid h-20 w-20 place-items-center rounded-full bg-[#163537] transition-all duration-300 group-hover:border-[#ffeeff] group-hover:border"
           >
 
             <component :is="service.iconComponent" class="h-10 w-10 text-white transition-all"/>
@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <TechStack />
+      <TechStack data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" />
       <ProjectComp />
       <ContactForm />
       
@@ -103,11 +103,15 @@ import Footer from "@/components/Footer.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import CodeIcon from "@/components/IconComp/CodeIcon.vue"
 import ItIcon from "@/components/IconComp/ItIcon.vue"
 import DesignIcon from "@/components/IconComp/DesignIcon.vue"
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+onMounted(() => {
+  AOS.init();
+});
 const services = ref([
   {
     id: 1,
