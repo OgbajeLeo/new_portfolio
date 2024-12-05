@@ -12,7 +12,7 @@
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="w-fit rounded-md overflow-hidden border shadow-lg"
+        class="w-fit rounded-md overflow-hidden border shadow-md"
       >
         <img
           :src="card.image"

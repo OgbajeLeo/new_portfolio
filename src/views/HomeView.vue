@@ -34,7 +34,11 @@
         <div class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center bounce">
           <img src="../../public/img/profile.svg" alt="png" class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]"/>
         </div>
+
+        
       </div>
+     
+
 
       <a href="#project" class="sm:flex hidden border-2 rounded-full z-[1] h-14 w-14 -mt-10 justify-center items-center bounce cursor-pointer">
         <img
@@ -45,14 +49,17 @@
         />
     </a>
 
-      <div class="border w-full my-4"></div>
-      
+      <div class="border w-full my-4"></div>      
 
 
       <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-        <h1 class="lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12  text-[#163537]">
+        <h1 class="bg-image bg-cover bg-center lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12  text-[#163537]">
            
           What I do?
+      </h1>
+        <h1 id="title" class="leo">
+           
+         
       </h1>
         <div class="flex flex-col gap-6 lg:flex-row sm:gap-6 sm:justify-center px-4">
 
@@ -88,7 +95,7 @@
         </div>
       </div>
 
-      <TechStack data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" />
+      <TechStack />
       <ProjectComp />
       <ContactForm />
       
@@ -112,6 +119,8 @@ import 'aos/dist/aos.css';
 onMounted(() => {
   AOS.init();
 });
+
+
 const services = ref([
   {
     id: 1,
@@ -135,6 +144,5 @@ const services = ref([
 </script>
 
 <style scoped>
-
 
 </style>

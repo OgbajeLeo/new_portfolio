@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" id="" class="flex justify-center items-center">
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" id="" class="flex justify-center items-center">
     <h1
       class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537]"
     >
@@ -10,10 +10,11 @@
     class="py-8 px-2 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto"
   >
     <div
+    data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200"
       class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-6 md:gap-12 gap-6"
     >
       <div
-      data-aos="fade-left" data-aos-duration="500" data-aos-delay="300"
+     
         v-for="tech in techStack"
         :key="tech.name"
         id="stack"
