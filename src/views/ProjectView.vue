@@ -64,7 +64,7 @@
             >
               <div
                 v-if="card.github != '/'"
-                class="flex justify-start gap-3 items-center border shadow-md shadow-[#333] hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
+                class="flex justify-start gap-3 items-center border shadow-sm shadow-[#333] hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
               >
                 <a :href="card.github" class="">Github</a>
                 <svg
@@ -102,10 +102,10 @@
                   />
                 </svg>
               </div>
-              <div
-                class="flex justify-start gap-3 items-center border shadow-[#333] shadow-md hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
+              <div 
+                class="flex justify-start gap-3 items-center border shadow-[#333] shadow-sm hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
               >
-                <a :href="card.live" class="">Live</a>
+                <a :href="card.live" class="" target="_blank" >Live</a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -194,6 +194,16 @@ const cards = [
     stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
   },
   {
+    image:"/img/dashboard2.png",
+    title: "TBs Dashboard",
+    description:
+    "Designed and developed a desktop-only dashboard and voucher page within 48 hours for a time-bound assessment. Built with Next.js and TailwindCSS, the project focuses on a user-friendly interface for desktop users but is not mobile-responsive.",
+
+    github: "/",
+    live: "https://dashboard-task-taupe.vercel.app/",
+    stack: "NextJs, TailwindCss ,ChartsJs",
+  },
+  {
     image:
       "https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/644196fed9615418abe95e1f_home-depot-internship-thumbnail-p-1080.jpg",
     title: "The Orangeworks",
@@ -203,15 +213,6 @@ const cards = [
     live: "Button 2",
     stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
   },
-  {
-    image:
-      "https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/644196fed9615418abe95e1f_home-depot-internship-thumbnail-p-1080.jpg",
-    title: "Image Cropper ",
-    description:
-      "Develop and implement engaging lesson plans in accordance with the school's curriculum guidelines and educationstandards.Foster a positive and inclusive classroom environment that Develop and implement engaging lesson plans in accordance with the school's",
-    github: "Button 1",
-    live: "Button 2",
-    stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
-  },
+    
 ];
 </script>

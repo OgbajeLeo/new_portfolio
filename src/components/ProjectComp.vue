@@ -14,11 +14,13 @@
         :key="index"
         class="w-fit rounded-md overflow-hidden border shadow-md"
       >
+      <div class="p-4 py-2">
         <img
           :src="card.image"
           alt="Card Image"
-          class="card-image w-full h-80 lg:object-cover object-fill border rounded-t-md hover:scale-105"
+          class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
         />
+      </div>
         <div class="p-4 pt-6">
           <h2 class="sm:text-xl text-base font-bold mb-2 h-8">
             {{ card.title }}
@@ -81,7 +83,7 @@
             <div
               class="flex justify-start gap-3 items-center border shadow-[#333] shadow-md hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
             >
-              <a :href="card.live" class="">Live</a>
+              <a :href="card.live" class="" target="_blank">Live</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -131,14 +133,14 @@ const cards = [
     live: "https://jciaso.vercel.app/",
   },
   {
-    image:
-      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401252/ImageCropper_ecgfiu.png",
-    title: "Image Cropper ",
+    image:"/img/dashboard2.png",
+    title: "TBs Dashboard",
     description:
-      "Image Cropper project empowers users to effortlessly upload, resize, crop, and download their images with precision and ease. Whether you're a photographer, designer, or simply someone looking to customize images for personal use, this tool offers intuitive features to enhance your editing experience.",
-    github: "https://github.com/OgbajeLeo/ImageCropper",
-    live: "https://croper-gamma.vercel.app/",
-    stack: "HTML, TailwindCss , Vanilla Js, Cropper.js",
+    "Designed and developed a desktop-only dashboard and voucher page within 48 hours for a time-bound assessment. Built with Next.js and TailwindCSS, the project focuses on a user-friendly interface for desktop users but is not mobile-responsive.",
+
+    github: "/",
+    live: "https://dashboard-task-taupe.vercel.app/",
+    stack: "NextJs, TailwindCss ,ChartsJs",
   },
   {
     image:

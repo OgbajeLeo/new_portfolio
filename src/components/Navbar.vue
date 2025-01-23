@@ -1,12 +1,15 @@
 <template>
 <div class="sticky top-0 bg-opacity-50 backdrop-blur-md lg:mb-4 mb-0 z-50">
-<nav class=" h-[60px] lg:h-[90px] max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto flex justify-between items-center">
-  <div>
+<nav class=" h-[60px] lg:h-[90px] max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto flex justify-between items-center shadow-sm">
+  <div class="text-[#163537]">
       <router-link to="/">
-      <h1 class="text-3xl font-bold text-[#333]">< /></h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        
     </router-link>
 </div>
-<div class="flex items-center gap-2">
+<div class="flex items-center gap-2"  >
     <div
             class="bg-green-400 rounded-full size-2 animate-ping"
           >
