@@ -119,9 +119,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import Footer from "../components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -146,6 +146,18 @@ const coreTechnologies = ref(
 const familiarWith = ref(`Typescript, Node Js,  PWAs, SEO.`);
 const onTheJob = ref(`Version Control, Best Practices`);
 const experiences = ref([
+  {
+    company: "SFx",
+    position: "Lead Frontend Engineer",
+    duration: "Feb 2025 - Present",
+    highlights: [
+      "Designed and developed user-friendly, responsive interfaces for the platform using modern web technologies, ensuring seamless interaction and a positive user experience.",
+      "Collaborated closely with product designers and backend engineers to deliver innovative features and integrate APIs for cross-border transactions, savings accounts, and card spending.",
+      "Implemented best practices in performance optimization, security, and accessibility to meet high standards of the fintech industry.",
+      "Led the team in adopting agile methodologies, ensuring efficient project delivery while maintaining a strong focus on meeting client needs and business goals.",
+      "Played a key role in scaling the platform to support a growing user base while maintaining a high level of code quality and system reliability.",
+    ],
+  },
   {
     company: "Trendx",
     position: "Frontend Engineer",
