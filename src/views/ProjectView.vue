@@ -41,7 +41,7 @@
           <img
             :src="card.image"
             alt="Card Image"
-            class="card-image w-full h-80 lg:object-cover object-fill border rounded-t-md hover:scale-105"
+            class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
           />
           <div class="p-4 pt-6">
             <h2 class="sm:text-xl text-base font-bold mb-2 h-8">
@@ -102,10 +102,10 @@
                   />
                 </svg>
               </div>
-              <div 
+              <div
                 class="flex justify-start gap-3 items-center border shadow-[#333] shadow-sm hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
               >
-                <a :href="card.live" class="" target="_blank" >Live</a>
+                <a :href="card.live" class="" target="_blank">Live</a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -194,10 +194,10 @@ const cards = [
     stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
   },
   {
-    image:"/img/dashboard2.png",
+    image: "/img/dashboard2.png",
     title: "TBs Dashboard",
     description:
-    "Designed and developed a desktop-only dashboard and voucher page within 48 hours for a time-bound assessment. Built with Next.js and TailwindCSS, the project focuses on a user-friendly interface for desktop users but is not mobile-responsive.",
+      "Designed and developed a desktop-only dashboard and voucher page within 48 hours for a time-bound assessment. Built with Next.js and TailwindCSS, the project focuses on a user-friendly interface for desktop users but is not mobile-responsive.",
 
     github: "/",
     live: "https://dashboard-task-taupe.vercel.app/",
@@ -213,6 +213,5 @@ const cards = [
     live: "Button 2",
     stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
   },
-    
 ];
 </script>
