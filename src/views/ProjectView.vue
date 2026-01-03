@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <AppNavbar />
     <button
       @click="goBack"
       class="flex items-center justify-start gap-3 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] mx-auto font-semibold w-full md:text-base text-sm mt-4 md:hidden"
@@ -41,6 +41,7 @@
           <img
             :src="card.image"
             alt="Card Image"
+            loading="lazy"
             class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
           />
           <div class="p-4 pt-6">
@@ -126,14 +127,21 @@
         </div>
       </div>
     </section>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from "../components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import AppNavbar from "@/components/AppNavbar.vue";
+import AppFooter from "@/components/AppFooter.vue";
 import { useRouter } from "vue-router";
+import eso from "../assets/eso.png";
+import attica from "../assets/attica.png";
+import fun from "../assets/fun.png";
+import gen6ixx from "../assets/gen6ixx.png";
+import alt from "../assets/alt-Createe.png";
+import lurah from "../assets/mylurah.png";
+import safi from "../assets/safibest.png";
 
 const router = useRouter();
 
@@ -145,15 +153,72 @@ const goBack = () => {
   }
 };
 
-interface Card {
-  image: string;
-  title: string;
-  description: string;
-  button1: string;
-  button2: string;
-}
-
 const cards = [
+  {
+    image: eso,
+    title: "ESO Security Training Platform",
+    description:
+      "A comprehensive security training platform with Admin CMS.This platform provides robust security training solutions/certification with a full-featured content management system for administrators.",
+    github: "/",
+    live: "https://esotrainingnw.co.uk/",
+    stack: "ReactJs,Framer, NodeJs, TailwindCss, CMS Integration",
+  },
+  {
+    image: attica,
+    title: "AtticaHQ Real Estate Platform",
+    description:
+      "A sophisticated real estate platform with Admin CMS for product listings, featuring AI-powered capabilities. AtticaHQ offers advanced property management tools and intelligent features to enhance the real estate experience.",
+    github: "/",
+    live: "https://atticahq.com/",
+    stack: "ReactJs, NodeJs, TailwindCss, AI Integration, CMS",
+  },
+  {
+    image: fun,
+    title: "FunNTail Official Website",
+    description:
+      "The official website for FunNTail. A modern, responsive web presence showcasing the company's services and portfolio with an engaging user experience.",
+    github: "/",
+    live: "https://funntail.com",
+    stack: "ReactJs,NodeJs,Framer, TailwindCss, Modern UI/UX",
+  },
+  {
+    image: gen6ixx,
+    title: "Gen6ixx Official Website",
+    description:
+      "The official website for Gen6ixx, developed to showcase the company's innovative solutions and expertise. Built with modern web technologies to deliver a professional and engaging digital experience.",
+    github: "/",
+    live: "https://gen6ixx.com/",
+    stack: "ReactJs,NodeJs,Framer,, TailwindCss, Modern UI/UX",
+  },
+  {
+    image: alt,
+    title: "Alt-Create Creative Product Studio",
+    description:
+      "A creative product studio offering comprehensive digital solutions including web applications, mobile apps, designs, motion graphics, and more. Built to deliver innovative and high-quality digital experiences across multiple platforms and media.",
+    github: "/",
+    live: "https://alt-create.vercel.app/",
+    stack:
+      "ReactJs, NodeJs, TailwindCss, Motion Graphics, UI/UX Design, Mobile Development",
+  },
+  {
+    image: safi,
+    title: "Safibest Fashion Website",
+    description:
+      "A comprehensive fashion website for Safibest Fashion showcasing her brand identity, portfolio of works, training programs, and consultation services. The platform provides an elegant and professional online presence for the fashion brand.",
+    github: "/",
+    live: "https://safibest.vercel.app/",
+    stack: "ReactJs, TailwindCss, Modern UI/UX, Framer",
+  },
+  {
+    image: lurah,
+    title: "Mylurah",
+    description:
+      "A culturally rooted digital wellbeing platform by the MomandMe Foundation (MMF), created to transform reproductive, menstrual, and maternal health for Black and African women. Centred on real stories and lived experiences, it provides tools and education to guide women through every stage, from their first period to pregnancy, postpartum, and beyond with voice-led learning, multilingual content, and accessible cycle tracking.",
+    github: "/",
+    live: "https://mylurah.com",
+    stack:
+      "ReactJs, NodeJs, TailwindCss, Voice Technology, Multilingual Support, Health Tracking",
+  },
   {
     image:
       "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401253/JCIASO_bqbvrk.png",

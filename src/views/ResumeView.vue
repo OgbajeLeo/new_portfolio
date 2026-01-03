@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <Navbar />
+    <AppNavbar />
     <button
       @click="goBack"
       class="flex items-center justify-start gap-3 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] mx-auto font-semibold w-full md:text-base text-sm mt-4 md:hidden"
@@ -114,13 +114,13 @@
         >
       </div>
     </div>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import Footer from "../components/Footer.vue";
-import Navbar from "@/components/Navbar.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import AppNavbar from "@/components/AppNavbar.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
@@ -159,9 +159,29 @@ const experiences = ref([
     ],
   },
   {
+    company: "FunNTail",
+    position: "Frontend Engineer (Freelancing)",
+    duration: "Oct 2025 - Present",
+    highlights: [
+      "Working remotely as a freelance frontend engineer, delivering high-quality user interfaces and interactive web applications.",
+      "Collaborating with cross-functional teams to implement responsive designs and ensure optimal user experiences.",
+      "Utilizing modern frontend technologies to build scalable and maintainable solutions.",
+    ],
+  },
+  {
+    company: "Gen6ixxx Venture",
+    position: "Frontend Engineer (Freelancing)",
+    duration: "June 2025 - Present",
+    highlights: [
+      "Working remotely as a freelance frontend engineer, developing and maintaining web applications for the venture.",
+      "Implementing modern UI/UX designs and ensuring cross-browser compatibility and responsive layouts.",
+      "Contributing to project success through efficient code delivery and adherence to best practices.",
+    ],
+  },
+  {
     company: "Trendx",
     position: "Frontend Engineer",
-    duration: "Jan 2025 - Present",
+    duration: "Jan 2025 - March 2025",
     highlights: [
       "Developed a decentralized autonomous organization (DAO) platform for businesses using React, enhancing transparency and governance.",
       "Implemented key frontend features, including smart contract interactions, user authentication, and data visualization for DAO operations.",
@@ -180,6 +200,7 @@ const experiences = ref([
       "Successfully delivered the project within established timelines, showcasing strong project management skills and commitment to meeting client requirements.",
     ],
   },
+
   {
     company: "TIIDELab Initiative",
     position: "Frontent Developer ",

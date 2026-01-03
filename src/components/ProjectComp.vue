@@ -14,13 +14,13 @@
         :key="index"
         class="w-fit rounded-md overflow-hidden border shadow-md"
       >
-      <div class="p-4 py-2">
-        <img
-          :src="card.image"
-          alt="Card Image"
-          class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
-        />
-      </div>
+        <div class="p-4 py-2">
+          <img
+            :src="card.image"
+            alt="Card Image"
+            class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
+          />
+        </div>
         <div class="p-4 pt-6">
           <h2 class="sm:text-xl text-base font-bold mb-2 h-8">
             {{ card.title }}
@@ -112,54 +112,47 @@
 </template>
 
 <script setup lang="ts">
-interface Card {
-  image: string;
-  title: string;
-  description: string;
-  stack: string;
-  button1: string;
-  button2: string;
-}
+import eso from "../assets/eso.png";
+import attica from "../assets/attica.png";
+import fun from "../assets/fun.png";
+import gen6ixx from "../assets/gen6ixx.png";
 
 const cards = [
   {
-    image:
-      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401253/JCIASO_bqbvrk.png",
-    title: "JCI ASO",
+    image: eso,
+    title: "ESO Security Training Platform",
     description:
-      " Collaborating with other developers to build the official website for JCI ASO is an exciting project aimed at creating a dynamic and engaging online presence for the organization. JCI, or Junior Chamber International",
+      "A comprehensive security training platform with Admin CMS.This platform provides robust security training solutions/certification with a full-featured content management system for administrators.",
     github: "/",
-    stack: "ReactJs, TailwindCss , Material UI, Framer",
-    live: "https://jciaso.vercel.app/",
+    live: "https://esotrainingnw.co.uk/",
+    stack: "ReactJs,Framer, NodeJs, TailwindCss, CMS Integration",
   },
   {
-    image:"/img/dashboard2.png",
-    title: "TBs Dashboard",
+    image: attica,
+    title: "AtticaHQ Real Estate Platform",
     description:
-    "Designed and developed a desktop-only dashboard and voucher page within 48 hours for a time-bound assessment. Built with Next.js and TailwindCSS, the project focuses on a user-friendly interface for desktop users but is not mobile-responsive.",
-
+      "A sophisticated real estate platform with Admin CMS for product listings, featuring AI-powered capabilities. AtticaHQ offers advanced property management tools and intelligent features to enhance the real estate experience.",
     github: "/",
-    live: "https://dashboard-task-taupe.vercel.app/",
-    stack: "NextJs, TailwindCss ,ChartsJs",
+    live: "https://atticahq.com/",
+    stack: "ReactJs, NodeJs, TailwindCss, AI Integration, CMS",
   },
   {
-    image:
-      "https://res.cloudinary.com/duw4jtxls/image/upload/v1721401975/TODOO_y0rovi.png",
-    title: "Todoify ",
+    image: fun,
+    title: "FunNTail Official Website",
     description:
-      "TODOIFY is a todo application that harnesses the power of LocalStorage to offer users seamless task management with all CRUD operations directly within their browser. Users can effortlessly create new tasks, Mark as done, and add task descriptions.",
-    github: "https://github.com/OgbajeLeo/todoify-vue",
-    live: "https://todoify-vue.vercel.app/",
-    stack: "VueJs, TailwindCss ",
+      "The official website for FunNTail. A modern, responsive web presence showcasing the company's services and portfolio with an engaging user experience.",
+    github: "/",
+    live: "https://funntail.com",
+    stack: "ReactJs,NodeJs,Framer, TailwindCss, Modern UI/UX",
   },
   {
-    image: "https://divineeffiong.vercel.app/asset/works.png/INSURE.png",
-    title: "INsure ",
+    image: gen6ixx,
+    title: "Gen6ixx Official Website",
     description:
-      "INsure is a comprehensive insurance sale management tool designed to empower insurance agents in efficiently managing and tracking leads throughout the sales process. Developed in collaboration with skilled developers,",
+      "The official website for Gen6ixx, developed to showcase the company's innovative solutions and expertise. Built with modern web technologies to deliver a professional and engaging digital experience.",
     github: "/",
-    live: "https://insure-personal-git-alice-home-alice2212.vercel.app/",
-    stack: "ReactJs, NodeJs, Redux,  TailwindCss , Material UI, AOS,",
+    live: "https://gen6ixx.com/",
+    stack: "ReactJs,NodeJs,Framer,, TailwindCss, Modern UI/UX",
   },
 ];
 </script>

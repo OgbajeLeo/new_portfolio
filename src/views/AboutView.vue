@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <AppNavbar />
     <section
       class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto mb-10 min-h-screen"
     >
@@ -13,10 +13,10 @@
       </div>
       <h1 class="mt-6">About page 10% loading ...</h1>
     </section>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 <script setup lang="ts">
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import AppNavbar from "@/components/AppNavbar.vue";
+import AppFooter from "@/components/AppFooter.vue";
 </script>
