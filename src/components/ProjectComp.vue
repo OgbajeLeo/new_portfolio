@@ -18,7 +18,7 @@
           <img
             :src="card.image"
             alt="Card Image"
-            class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
+            class="card-image w-full h-80 object-contain lg:object-cover border rounded-t-md hover:scale-105"
           />
         </div>
         <div class="p-4 pt-6">

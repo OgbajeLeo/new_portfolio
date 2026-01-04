@@ -5,7 +5,7 @@
     >
       <div id="project" class="flex flex-col justify-center items-center">
         <h1
-          class="lg:text-7xl text-4xl font-black text-center my-12 text-[#163537]"
+          class="lg:text-7xl text-4xl font-black text-center mt-12 text-[#163537]"
         >
           Get in Touch
         </h1>
@@ -88,7 +88,7 @@
 
           <div class="p-4 lg:col-span-2">
             <Form
-              v-slot="{ values, errors }"
+             
               :validation-schema="schema"
               @submit="submitForm"
             >
@@ -380,7 +380,9 @@ const submitForm = async (values: any, actions: any) => {
           // error.value = 'Failed to send the email. Please try again later.';
         }
       );
-  } catch (error) {}
+  } catch (error) {
+    console.error('FAILED...', error);
+  }
 };
 
 const error = ref<string | null>(null);

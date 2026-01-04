@@ -106,7 +106,9 @@
     </div>
 
     <TechStack />
+    <StatisticsComp />
     <ProjectComp />
+    <TestimonialsComp />
     <ContactForm />
   </section>
 
@@ -119,6 +121,8 @@ import AppFooter from "@/components/AppFooter.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
+import StatisticsComp from "@/components/StatisticsComp.vue";
+import TestimonialsComp from "@/components/TestimonialsComp.vue";
 import { onMounted, ref } from "vue";
 import CodeIcon from "@/components/IconComp/CodeIcon.vue";
 import ItIcon from "@/components/IconComp/ItIcon.vue";

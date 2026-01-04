@@ -4,6 +4,8 @@ import AboutView from "@/views/AboutView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import ResumeView from "@/views/ResumeView.vue";
 import ContactView from "@/views/ContactView.vue";
+import { initializeStructuredData } from "@/utils/structuredData";
+import { trackPageView } from "@/utils/analytics";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -235,6 +237,12 @@ router.beforeEach((to, from, next) => {
     meta.setAttribute("content", "summary_large_image");
     document.head.appendChild(meta);
   }
+
+  // Initialize structured data (JSON-LD) for SEO
+  initializeStructuredData(to.path, to.meta);
+
+  // Track page view in Google Analytics
+  trackPageView(to.path, (to.meta.title as string) || defaultTitle);
 
   next();
 });

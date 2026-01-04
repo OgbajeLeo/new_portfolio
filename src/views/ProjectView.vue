@@ -42,18 +42,31 @@
             :src="card.image"
             alt="Card Image"
             loading="lazy"
-            class="card-image w-full h-80 object-cover border rounded-t-md hover:scale-105"
+            class="card-image w-full h-80 object-contain lg:object-cover border rounded-t-md hover:scale-105"
           />
           <div class="p-4 pt-6">
             <h2 class="sm:text-xl text-base font-bold mb-2 h-8">
               {{ card.title }}
             </h2>
 
-            <p
-              class="font-light text-[#163537] sm:text-base text-sm mb-4 pb-6 lg:h-32 md:h-48 h-36"
-            >
-              {{ card.description }}
-            </p>
+            <div class="mb-4 pb-6">
+              <p class="font-light text-[#163537] sm:text-base text-sm">
+                {{
+                  expandedCards[index]
+                    ? card.description
+                    : card.description.length > 350
+                    ? card.description.substring(0, 350) + "..."
+                    : card.description
+                }}
+              </p>
+              <button
+                v-if="card.description.length > 350"
+                @click="toggleExpand(index)"
+                class="text-[#163537] font-semibold text-sm mt-2 hover:underline"
+              >
+                {{ expandedCards[index] ? "See less" : "See more" }}
+              </button>
+            </div>
 
             <p class="mb-4">
               <span class="font-semibold">Stack: </span>
@@ -135,6 +148,7 @@
 import AppNavbar from "@/components/AppNavbar.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 import eso from "../assets/eso.png";
 import attica from "../assets/attica.png";
 import fun from "../assets/fun.png";
@@ -144,6 +158,11 @@ import lurah from "../assets/mylurah.png";
 import safi from "../assets/safibest.png";
 
 const router = useRouter();
+const expandedCards = ref<{ [key: number]: boolean }>({});
+
+const toggleExpand = (index: number) => {
+  expandedCards.value[index] = !expandedCards.value[index];
+};
 
 const goBack = () => {
   if (router.currentRoute.value.fullPath !== "/") {
