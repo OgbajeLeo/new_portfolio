@@ -142,7 +142,7 @@ const cards = [
     description:
       "The official website for FunNTail. A modern, responsive web presence showcasing the company's services and portfolio with an engaging user experience.",
     github: "/",
-    live: "https://funntail.com",
+    live: "https://funntail.co.uk",
     stack: "ReactJs,NodeJs,Framer, TailwindCss, Modern UI/UX",
   },
   {
