@@ -10,13 +10,13 @@
       <div
         class="lg:w-1/2 w-full lg:text-left text-center flex flex-col lg:justify-start justify-center lg:items-start items-center"
       >
-        <h2 class="sm:text-[38px] text-[28px] font-bold text-[#163537]">
+        <h2 class="sm:text-[38px] text-[28px] font-bold text-[#163537] dark:text-gray-200">
           Hello, I'm Leo ッ
         </h2>
-        <h2 class="sm:text-[54px] text-[28px] font-bold text-[#163537]">
+        <h2 class="sm:text-[54px] text-[28px] font-bold text-[#163537] dark:text-gray-200">
           Frontend Developer
         </h2>
-        <p class="text-lg mt-4 text-[#56555e]">
+        <p class="text-lg mt-4 text-[#56555e] dark:text-gray-400">
           I specialize in crafting immersive user experiences using the latest
           frontend technologies and frameworks to bring your vision to life.
         </p>
@@ -28,7 +28,7 @@
           </div> -->
         <router-link
           to="/contact"
-          class="bg-primary-gray cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#163537] py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105"
+          class="bg-primary-gray dark:bg-gray-700 cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#163537] dark:text-gray-200 py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105 transition-all"
         >
           Get in Touch
         </router-link>
@@ -36,9 +36,15 @@
       <div
         class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center bounce"
       >
+        <div v-if="imageLoading" class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]">
+          <SkeletonLoader type="image" image-class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px] rounded" />
+        </div>
         <img
+          v-else
           src="../../public/img/profile.svg"
           alt="png"
+          @load="imageLoading = false"
+          @error="imageLoading = false"
           class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]"
         />
       </div>
@@ -46,7 +52,7 @@
 
     <a
       href="#project"
-      class="sm:flex hidden border-2 rounded-full z-[1] h-14 w-14 -mt-10 justify-center items-center bounce cursor-pointer"
+      class="sm:flex hidden border-2 dark:border-gray-700 rounded-full z-[1] h-14 w-14 -mt-10 justify-center items-center bounce cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
     >
       <img
         src="https://assets-global.website-files.com/60f5a97b9e66c2b92c76a14e/6140a7f1ccfe242db78e97b5_Vector.svg"
@@ -56,16 +62,16 @@
       />
     </a>
 
-    <div class="border w-full my-4"></div>
+    <div class="border dark:border-gray-700 w-full my-4"></div>
 
     <div
       data-aos="fade-up"
       data-aos-duration="2000"
       data-aos-delay="300"
-      class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12"
+      class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 dark:bg-gray-900 py-6 sm:py-12"
     >
       <h1
-        class="bg-image bg-cover bg-center lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12 text-[#163537]"
+        class="bg-image bg-cover bg-center lg:text-7xl text-4xl font-black text-center lg:mt-4 mb-12 text-[#163537] dark:text-gray-200"
       >
         What I do?
       </h1>
@@ -76,14 +82,14 @@
         <div
           v-for="service in services"
           :key="service.id"
-          class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-[#163537] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:max-w-sm sm:rounded-lg sm:px-10"
+          class="group relative cursor-pointer overflow-hidden bg-white dark:bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-[#163537] dark:ring-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:max-w-sm sm:rounded-lg sm:px-10"
         >
           <span
-            class="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#163537] transition-all duration-300 group-hover:scale-[10]"
+            class="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#163537] dark:bg-gray-700 transition-all duration-300 group-hover:scale-[10]"
           ></span>
           <div class="relative z-10 mx-auto max-w-md">
             <span
-              class="grid h-20 w-20 place-items-center rounded-full bg-[#163537] transition-all duration-300 group-hover:border-[#ffeeff] group-hover:border"
+              class="grid h-20 w-20 place-items-center rounded-full bg-[#163537] dark:bg-gray-700 transition-all duration-300 group-hover:border-[#ffeeff] dark:group-hover:border-gray-600 group-hover:border"
             >
               <component
                 :is="service.iconComponent"
@@ -91,12 +97,12 @@
               />
             </span>
             <div class="pt-5 text-xl font-semibold leading-7">
-              <p class="group-hover:text-white/90">
+              <p class="group-hover:text-white/90 text-gray-900 dark:text-gray-200">
                 {{ service.title }}
               </p>
             </div>
             <div
-              class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90"
+              class="space-y-6 pt-5 text-base leading-7 text-gray-600 dark:text-gray-400 transition-all duration-300 group-hover:text-white/90"
             >
               <p>{{ service.description }}</p>
             </div>
@@ -123,14 +129,27 @@ import TechStack from "@/components/TechStack.vue";
 import ProjectComp from "@/components/ProjectComp.vue";
 import StatisticsComp from "@/components/StatisticsComp.vue";
 import TestimonialsComp from "@/components/TestimonialsComp.vue";
+import SkeletonLoader from "@/components/SkeletonLoader.vue";
 import { onMounted, ref } from "vue";
 import CodeIcon from "@/components/IconComp/CodeIcon.vue";
 import ItIcon from "@/components/IconComp/ItIcon.vue";
 import DesignIcon from "@/components/IconComp/DesignIcon.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const imageLoading = ref(true);
+
 onMounted(() => {
   AOS.init();
+  // Preload profile image
+  const img = new Image();
+  img.src = "../../public/img/profile.svg";
+  img.onload = () => {
+    imageLoading.value = false;
+  };
+  img.onerror = () => {
+    imageLoading.value = false;
+  };
 });
 
 const services = ref([

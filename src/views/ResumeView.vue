@@ -22,7 +22,7 @@
       <span>Go Back</span>
     </button>
     <div class="border max-w-4xl mx-auto p-4 my-8">
-      <div class="text-center mb-4 bg-secondary-gray py-4">
+      <div class="text-center mb-4 bg-secondary-gray dark:bg-gray-800  py-4">
         <h1 class="sm:text-7xl text-4xl font-bold mt-6">{{ fullName }}</h1>
         <div class="flex justify-center items-center gap-4 mt-2">
           <a

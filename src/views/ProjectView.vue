@@ -1,32 +1,32 @@
 <template>
   <div>
     <AppNavbar />
-    <button
-      @click="goBack"
-      class="flex items-center justify-start gap-3 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] mx-auto font-semibold w-full md:text-base text-sm mt-4 md:hidden"
-    >
-      <svg
-        class="size-5"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        @click="goBack"
+        class="flex items-center justify-start gap-3 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] mx-auto font-semibold w-full md:text-base text-sm mt-4 md:hidden text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
       >
-        <path
-          d="M15 19l-7-7 7-7"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <span>Go Back</span>
-    </button>
+        <svg
+          class="size-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 19l-7-7 7-7"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span>Go Back</span>
+      </button>
     <section
       class="max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto mb-10"
     >
       <div id="project" class="flex justify-center items-center">
         <h1
-          class="lg:text-7xl text-4xl font-black text-center my-12 text-[#163537]"
+          class="lg:text-7xl text-4xl font-black text-center my-12 text-[#163537] dark:text-gray-200"
         >
           All Projects
         </h1>
@@ -36,21 +36,21 @@
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="w-fit rounded-md overflow-hidden border shadow-lg"
+          class="w-fit rounded-md overflow-hidden border shadow-lg bg-white dark:bg-gray-800 dark:border-gray-700"
         >
           <img
             :src="card.image"
             alt="Card Image"
             loading="lazy"
-            class="card-image w-full h-80 object-contain lg:object-cover border rounded-t-md hover:scale-105"
+            class="card-image w-full h-80 object-contain lg:object-cover border dark:border-gray-700 rounded-t-md hover:scale-105"
           />
           <div class="p-4 pt-6">
-            <h2 class="sm:text-xl text-base font-bold mb-2 h-8">
+            <h2 class="sm:text-xl text-base font-bold mb-2 h-8 text-gray-900 dark:text-gray-200">
               {{ card.title }}
             </h2>
 
             <div class="mb-4 pb-6">
-              <p class="font-light text-[#163537] sm:text-base text-sm">
+              <p class="font-light text-[#163537] dark:text-gray-300 sm:text-base text-sm">
                 {{
                   expandedCards[index]
                     ? card.description
@@ -62,23 +62,23 @@
               <button
                 v-if="card.description.length > 350"
                 @click="toggleExpand(index)"
-                class="text-[#163537] font-semibold text-sm mt-2 hover:underline"
+                class="text-[#163537] dark:text-gray-400 font-semibold text-sm mt-2 hover:underline"
               >
                 {{ expandedCards[index] ? "See less" : "See more" }}
               </button>
             </div>
 
-            <p class="mb-4">
+            <p class="mb-4 text-gray-700 dark:text-gray-300">
               <span class="font-semibold">Stack: </span>
               <span>{{ card.stack }}</span>
             </p>
 
             <div
-              class="flex justify-between border-b-2 pb-6 items-center text-[#ccc]"
+              class="flex justify-between border-b-2 dark:border-gray-700 pb-6 items-center text-[#ccc] dark:text-gray-500"
             >
               <div
                 v-if="card.github != '/'"
-                class="flex justify-start gap-3 items-center border shadow-sm shadow-[#333] hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
+                class="flex justify-start gap-3 items-center border dark:border-gray-600 shadow-sm shadow-[#333] dark:shadow-gray-900 hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-300 text-sm cursor-pointer"
               >
                 <a :href="card.github" class="">Github</a>
                 <svg
@@ -98,7 +98,7 @@
               </div>
               <div
                 v-else
-                class="flex justify-start gap-3 items-center border hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-not-allowed"
+                class="flex justify-start gap-3 items-center border dark:border-gray-600 hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-400 text-sm cursor-not-allowed"
               >
                 <div class="">Github</div>
                 <svg
@@ -117,7 +117,7 @@
                 </svg>
               </div>
               <div
-                class="flex justify-start gap-3 items-center border shadow-[#333] shadow-sm hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black text-sm cursor-pointer"
+                class="flex justify-start gap-3 items-center border dark:border-gray-600 shadow-[#333] dark:shadow-gray-900 shadow-sm hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-300 text-sm cursor-pointer"
               >
                 <a :href="card.live" class="" target="_blank">Live</a>
                 <svg
@@ -125,8 +125,8 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="gray"
-                  class="size-3"
+                  stroke="currentColor"
+                  class="size-3 text-gray-600 dark:text-gray-400"
                 >
                   <path
                     stroke-linecap="round"

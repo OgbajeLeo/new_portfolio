@@ -34,6 +34,12 @@ body{
     background: #FCFCFC;
     color:#333;
     @apply no-scrollbar;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background: #1a1a1a;
+    color: #e5e5e5;
 }
 *{
     margin: 0;

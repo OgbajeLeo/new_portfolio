@@ -2,7 +2,7 @@
   <div class="py-12 lg:py-24">
     <div id="testimonials" class="flex justify-center items-center">
       <h1
-        class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537]"
+        class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537] dark:text-gray-200"
       >
         Testimonials
       </h1>
@@ -23,11 +23,12 @@
             <div
               :class="[
                 'w-full rounded-md overflow-hidden border shadow-md hover:shadow-lg transition-shadow',
-                index % 2 !== 0 ? 'bg-primary-gray/50' : ''
+                index % 2 !== 0 ? 'bg-primary-gray/50 dark:bg-gray-800/50' : 'bg-white dark:bg-gray-800',
+                'dark:border-gray-700'
               ]"
             >
               <div class="p-4 pt-6">
-                <div class="mb-4 flex items-center gap-2">
+                <div class="mb-4 flex items-center gap-1">
                   <div
                     v-for="star in 5"
                     :key="star"
@@ -37,22 +38,22 @@
                   </div>
                 </div>
                 <p
-                  class="font-light text-[#163537] sm:text-base text-sm mb-4 pb-6 leading-relaxed break-words"
+                  class="font-light text-[#163537] dark:text-gray-300 sm:text-base text-sm mb-4 pb-6 leading-relaxed break-words"
                 >
                   "{{ testimonial.quote }}"
                 </p>
 
-                <div class="flex items-center gap-3 border-t-2 pt-4">
+                <div class="flex items-center gap-3 border-t-2 dark:border-gray-700 pt-4">
                   <div
-                    class="size-12 rounded-full bg-[#163537]/70 border-4 flex items-center justify-center text-white font-bold text-lg"
+                    class="size-12 rounded-full bg-[#163537]/70 dark:bg-gray-600 border-4 dark:border-gray-600 flex items-center justify-center text-white font-bold text-lg"
                   >
                     {{ testimonial.initials }}
                   </div>
                   <div>
-                    <h3 class="font-bold text-[#163537] sm:text-base text-sm">
+                    <h3 class="font-bold text-[#163537] dark:text-gray-200 sm:text-base text-sm">
                       {{ testimonial.name }}
                     </h3>
-                    <p class="font-light text-[#56555e] sm:text-sm text-xs">
+                    <p class="font-light text-[#56555e] dark:text-gray-400 sm:text-sm text-xs">
                       {{ testimonial.role }} • {{ testimonial.company }}
                     </p>
                   </div>
@@ -66,7 +67,7 @@
       <!-- Navigation Buttons -->
       <button
         @click="previousSlide"
-        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-[#163537] text-white rounded-full p-3 hover:bg-[#1a4043] transition-colors shadow-lg z-10"
+        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-[#163537]/40 dark:bg-gray-700/40 text-white dark:text-gray-200 rounded-full p-3 hover:bg-[#1a4043] dark:hover:bg-gray-600 transition-colors shadow-lg z-10"
         aria-label="Previous testimonial"
       >
         <svg
@@ -86,7 +87,7 @@
       </button>
       <button
         @click="nextSlide"
-        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-[#163537] text-white rounded-full p-3 hover:bg-[#1a4043] transition-colors shadow-lg z-10"
+        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-[#163537]/40 dark:bg-gray-700/40 text-white dark:text-gray-200 rounded-full p-3 hover:bg-[#1a4043] dark:hover:bg-gray-600 transition-colors shadow-lg z-10"
         aria-label="Next testimonial"
       >
         <svg
@@ -229,6 +230,10 @@ onUnmounted(() => {
 #testimonials:target {
   background-color: #f7f7f7;
   transition: background-color 0.5s ease-in-out;
+}
+
+.dark #testimonials:target {
+  background-color: #1f2937;
 }
 
 /* Hide navigation buttons on very small screens */

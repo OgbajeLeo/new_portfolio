@@ -5,22 +5,22 @@
     >
       <div id="project" class="flex flex-col justify-center items-center">
         <h1
-          class="lg:text-7xl text-4xl font-black text-center mt-12 text-[#163537]"
+          class="lg:text-7xl text-4xl font-black text-center mt-12 text-[#163537] dark:text-gray-200"
         >
           Get in Touch
         </h1>
-        <p class="text-sm md:text-base text-gray-500 mt-4">
+        <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 mt-4">
           Have some big idea or brand to develop and need help?
         </p>
       </div>
       <div
-        class="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif]"
+        class="max-w-5xl max-lg:max-w-3xl mx-auto bg-white dark:bg-gray-800 my-6 font-[sans-serif]"
       >
         <div
-          class="grid lg:grid-cols-3 items-start gap-4 border p-2 shadow-md border-[#333] rounded-lg mt-12"
+          class="grid lg:grid-cols-3 items-start gap-4 border dark:border-gray-700 p-2 shadow-md border-[#333] dark:border-gray-700 rounded-lg mt-12"
         >
           <div
-            class="lg:block hidden bg-new-gray text-white rounded-lg p-6 h-full max-lg:order-1"
+            class="lg:block hidden bg-new-gray dark:bg-gray-700 text-white rounded-lg p-6 h-full max-lg:order-1"
           >
             <h2 class="text-xl font-semibold">Contact Information</h2>
             <p class="text-sm md:text-base mt-4">
@@ -100,7 +100,7 @@
                       placeholder="Name"
                       name="name"
                       id="name"
-                      class="px-2 pr-7 py-3 bg-white w-full text-sm text-black border-b border-gray-300 focus:border-black outline-none"
+                      class="px-2 pr-7 py-3 bg-white dark:bg-gray-800 w-full text-sm text-black dark:text-gray-200 border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-gray-400 outline-none"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@
                       placeholder="Email"
                       id="email"
                       name="email"
-                      class="px-2 pr-7 py-3 bg-white text-black w-full text-sm border-b border-gray-300 focus:border-black outline-none"
+                      class="px-2 pr-7 py-3 bg-white dark:bg-gray-800 text-black dark:text-gray-200 w-full text-sm border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-gray-400 outline-none"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@
                       id="message"
                       rows="5"
                       placeholder="Write Message"
-                      class="px-2 pr-7 lg:pr-5 pt-3 bg-white text-black w-full text-sm border-b border-gray-300 focus:border-black outline-none"
+                      class="px-2 pr-7 lg:pr-5 pt-3 bg-white dark:bg-gray-800 text-black dark:text-gray-200 w-full text-sm border-b border-gray-300 dark:border-gray-600 focus:border-black dark:focus:border-gray-400 outline-none"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@
                 </div>
 
                 <div class="col-span-full">
-                  <h6 class="text-sm text-black">Select Subject</h6>
+                  <h6 class="text-sm text-black dark:text-gray-300">Select Subject</h6>
                   <div class="flex flex-col gap-6 mt-4">
                     <div
                       v-for="(subject, index) in subjects"
@@ -242,13 +242,13 @@
                       />
                       <label
                         :for="'radio' + (index + 1)"
-                        class="relative p-0.5 flex items-center justify-center shrink-0 peer-checked:before:hidden before:block before:absolute before:w-full before:h-full before:bg-white w-5 h-5 cursor-pointer border-2 border-[#011c2b] rounded-full overflow-hidden"
+                        class="relative p-0.5 flex items-center justify-center shrink-0 peer-checked:before:hidden before:block before:absolute before:w-full before:h-full before:bg-white dark:before:bg-gray-800 w-5 h-5 cursor-pointer border-2 border-[#011c2b] dark:border-gray-400 rounded-full overflow-hidden"
                       >
                         <span
-                          class="border-[6px] border-[#011c2b] rounded-full w-full h-full"
+                          class="border-[6px] border-[#011c2b] dark:border-gray-400 rounded-full w-full h-full"
                         ></span>
                       </label>
-                      <p class="text-sm text-black ml-4">{{ subject.label }}</p>
+                      <p class="text-sm text-black dark:text-gray-300 ml-4">{{ subject.label }}</p>
                     </div>
                   </div>
                 </div>
@@ -260,7 +260,7 @@
 
               <button
                 type="submit"
-                class="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded-[30px] px-4 py-3 tracking-wide hover:scale-105 hover:shadow-md text-black font-bold bg-primary-gray hover:bg-primary-gray"
+                class="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded-[30px] px-4 py-3 tracking-wide hover:scale-105 hover:shadow-md text-black dark:text-gray-200 font-bold bg-primary-gray dark:bg-gray-700 hover:bg-primary-gray dark:hover:bg-gray-600 transition-all"
               >
                 <svg
                   v-if="!isLoading"

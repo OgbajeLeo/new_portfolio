@@ -1,7 +1,7 @@
 <template>
   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" id="" class="flex justify-center items-center">
     <h1
-      class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537]"
+      class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537] dark:text-gray-200"
     >
       Tech Stack / Skills
     </h1>
@@ -18,10 +18,10 @@
         v-for="tech in techStack"
         :key="tech.name"
         id="stack"
-        class="flex flex-col items-center gap-3 bg-white p-4 rounded-lg shadow-slate-300 shadow-lg"
+        class="flex flex-col items-center gap-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-slate-300 dark:shadow-gray-900 shadow-lg border dark:border-gray-700"
       >
         <img :src="tech.logo" :alt="tech.name" class="size-12" />
-        <h3 class="md:text-lg text-sm font-semibold">{{ tech.name }}</h3>
+        <h3 class="md:text-lg text-sm font-semibold text-gray-900 dark:text-gray-200">{{ tech.name }}</h3>
       </div>
     </div>
   </section>
@@ -98,5 +98,9 @@ const techStack = [
 #stack:hover {
   background-color: #f9fafb; /* Light gray background on hover */
   transform: scale(1.05); /* Slightly scale up */
+}
+
+.dark #stack:hover {
+  background-color: #374151; /* Dark gray background on hover */
 }
 </style>

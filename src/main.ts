@@ -19,4 +19,10 @@ if (gaMeasurementId) {
   );
 }
 
-createApp(App).use(store).use(router).mount("#app");
+const app = createApp(App);
+app.use(store).use(router);
+
+// Initialize dark mode before mounting
+store.dispatch('theme/initDarkMode');
+
+app.mount("#app");

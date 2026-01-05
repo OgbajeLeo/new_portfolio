@@ -2,7 +2,7 @@
   <div class="py-12 lg:py-24">
     <div id="statistics" class="flex justify-center items-center">
       <h1
-        class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537]"
+        class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537] dark:text-gray-200"
       >
         Statistics
       </h1>
@@ -12,21 +12,21 @@
       <div
         v-for="(stat, index) in statistics"
         :key="index"
-        class="w-full rounded-md overflow-hidden border shadow-md hover:shadow-lg transition-shadow"
+        class="w-full rounded-md overflow-hidden border shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 dark:border-gray-700"
       >
         <div class="p-6 pt-8 text-center">
           <!-- <div class="mb-4 flex justify-center">
-            <div v-html="stat.icon" class="size-12 text-[#163537]"></div>
+            <div v-html="stat.icon" class="size-12 text-[#163537] dark:text-gray-300"></div>
           </div> -->
-          <h2 class="sm:text-4xl text-3xl font-bold mb-2 text-[#163537]">
+          <h2 class="sm:text-4xl text-3xl font-bold mb-2 text-[#163537] dark:text-gray-200">
             {{ stat.value }}
           </h2>
-          <p class="font-semibold text-[#163537] sm:text-base text-sm">
+          <p class="font-semibold text-[#163537] dark:text-gray-300 sm:text-base text-sm">
             {{ stat.label }}
           </p>
           <p
             v-if="stat.description"
-            class="font-light text-[#56555e] sm:text-sm text-xs mt-2"
+            class="font-light text-[#56555e] dark:text-gray-400 sm:text-sm text-xs mt-2"
           >
             {{ stat.description }}
           </p>
@@ -140,6 +140,10 @@ const statistics = [
 #statistics:target {
   background-color: #f7f7f7;
   transition: background-color 0.5s ease-in-out;
+}
+
+.dark #statistics:target {
+  background-color: #1f2937;
 }
 </style>
 
