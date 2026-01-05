@@ -124,8 +124,8 @@ const testimonials = [
     quote:
       "Leo brought our vision to life with his technical expertise and creative problem-solving skills. He's responsive, professional, and always goes above and beyond to ensure the final product exceeds expectations. Highly recommended!",
     name: "Henry Valentine",
-    role: "Creative Director",
-    company: "Design Studio",
+    role: "Mobile/Web Developer",
+    company: "Crovr",
     initials: "HV",
   },
   {
