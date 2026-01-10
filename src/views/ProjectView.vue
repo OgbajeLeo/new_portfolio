@@ -49,18 +49,18 @@
               {{ card.title }}
             </h2>
 
-            <div class="mb-4 pb-6">
+            <div class="mb-4 min-h-[120px]">
               <p class="font-light text-[#163537] dark:text-gray-300 sm:text-base text-sm">
                 {{
                   expandedCards[index]
                     ? card.description
-                    : card.description.length > 350
-                    ? card.description.substring(0, 350) + "..."
+                    : card.description.length > 200
+                    ? card.description.substring(0, 200) + "..."
                     : card.description
                 }}
               </p>
               <button
-                v-if="card.description.length > 350"
+                v-if="card.description.length > 200"
                 @click="toggleExpand(index)"
                 class="text-[#163537] dark:text-gray-400 font-semibold text-sm mt-2 hover:underline"
               >
@@ -156,6 +156,7 @@ import gen6ixx from "../assets/gen6ixx.png";
 import alt from "../assets/alt-Createe.png";
 import lurah from "../assets/mylurah.png";
 import safi from "../assets/safibest.png";
+import sfx from "../assets/sfx.png"
 
 const router = useRouter();
 const expandedCards = ref<{ [key: number]: boolean }>({});
@@ -173,6 +174,16 @@ const goBack = () => {
 };
 
 const cards = [
+  {
+    image:sfx,
+    title: "SFx Money App Web Version",
+    description:
+      "SFx Money App is a super money app that uses USDC to enable money transfers from Africa and to make Onchain and Offchain payments easy for Africans in Turkey. As the Frontend Lead, I championed the development of the web version, ensuring seamless integration of blockchain technologies, identity verification services, and multi-language support to deliver a robust financial platform for cross-border transactions.",
+    github: "/",
+    live: "https://sfxchange.co/en/",
+    stack:
+      "Next.js, i18n (Internationalization), Sumsub, SmileID, YellowCard, Blockchain Integrations",
+  },
   {
     image: eso,
     title: "ESO Security Training Platform",

@@ -5,8 +5,8 @@ module.exports = defineConfig({
   publicPath: '/', 
   pwa: {
     workboxOptions: {
-      skipWaiting: true, // Forces the new Service Worker to activate immediately
-      clientsClaim: true, // Ensures that all tabs use the updated Service Worker
+      skipWaiting: true, 
+      clientsClaim: true, 
     },
   },
 },
