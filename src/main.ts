@@ -5,10 +5,20 @@ import router from "./router";
 import store from "./store";
 import './main.css'
 import "animate.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { initGoogleAnalytics } from "@/utils/analytics";
+import Lenis from "lenis";
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time: number) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 const gaMeasurementId = "G-25V3V5RKY7";
 if (gaMeasurementId) {

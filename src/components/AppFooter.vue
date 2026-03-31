@@ -48,8 +48,8 @@
 
     <!--Copyright section-->
     <div class="w-full bg-black/5 dark:bg-gray-800/50 p-4 text-center">
-      © {{ year }}
-      <a href="https:linkedin.com/in/ogbajeleo" class="hover:underline">Ogbaje Leo Arome</a>
+       © <a href="https:linkedin.com/in/ogbajeleo" class="hover:underline italic">Ogbaje Leo Arome</a>  {{ year }} All rights Reserved
+      
     </div>
   </footer>
 </template>

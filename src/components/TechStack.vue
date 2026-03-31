@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" id="" class="flex justify-center items-center">
+  <div class="flex justify-center items-center">
     <h1
       class="lg:text-7xl text-4xl font-black text-center lg:mt-24 my-12 text-[#163537] dark:text-gray-200"
     >
@@ -10,30 +10,26 @@
     class="py-8 px-2 max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto"
   >
     <div
-    data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200"
       class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-6 md:gap-12 gap-6"
     >
       <div
-     
         v-for="tech in techStack"
         :key="tech.name"
         id="stack"
         class="flex flex-col items-center gap-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-slate-300 dark:shadow-gray-900 shadow-lg border dark:border-gray-700"
       >
         <img :src="tech.logo" :alt="tech.name" class="size-12" />
-        <h3 class="md:text-lg text-sm font-semibold text-gray-900 dark:text-gray-200">{{ tech.name }}</h3>
+        <h3
+          class="md:text-lg text-sm font-semibold text-gray-900 dark:text-gray-200"
+        >
+          {{ tech.name }}
+        </h3>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { onMounted } from 'vue';
-onMounted(() => {
-  AOS.init();
-});
 const techStack = [
   {
     name: "Vue.js",

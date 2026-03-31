@@ -10,10 +10,14 @@
       <div
         class="lg:w-1/2 w-full lg:text-left text-center flex flex-col lg:justify-start justify-center lg:items-start items-center"
       >
-        <h2 class="sm:text-[38px] text-[28px] font-bold text-[#163537] dark:text-gray-200">
+        <h2
+          class="sm:text-[38px] text-[28px] font-bold text-[#163537] dark:text-gray-200"
+        >
           Hello, I'm Leo ッ
         </h2>
-        <h2 class="sm:text-[54px] text-[28px] font-bold text-[#163537] dark:text-gray-200">
+        <h2
+          class="sm:text-[54px] text-[28px] font-bold text-[#163537] dark:text-gray-200"
+        >
           Frontend Developer
         </h2>
         <p class="text-lg mt-4 text-[#56555e] dark:text-gray-400">
@@ -36,8 +40,14 @@
       <div
         class="lg:w-1/2 w-full flex lg:justify-end justify-center items-center bounce"
       >
-        <div v-if="imageLoading" class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]">
-          <SkeletonLoader type="image" image-class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px] rounded" />
+        <div
+          v-if="imageLoading"
+          class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px]"
+        >
+          <SkeletonLoader
+            type="image"
+            image-class="max-w-[370px] max-h-[300px] w-[370px] md:w-[500px] rounded"
+          />
         </div>
         <img
           v-else
@@ -65,9 +75,6 @@
     <div class="border dark:border-gray-700 w-full my-4"></div>
 
     <div
-      data-aos="fade-up"
-      data-aos-duration="2000"
-      data-aos-delay="300"
       class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 dark:bg-gray-900 py-6 sm:py-12"
     >
       <h1
@@ -97,7 +104,9 @@
               />
             </span>
             <div class="pt-5 text-xl font-semibold leading-7">
-              <p class="group-hover:text-white/90 text-gray-900 dark:text-gray-200">
+              <p
+                class="group-hover:text-white/90 text-gray-900 dark:text-gray-200"
+              >
                 {{ service.title }}
               </p>
             </div>
@@ -134,13 +143,9 @@ import { onMounted, ref } from "vue";
 import CodeIcon from "@/components/IconComp/CodeIcon.vue";
 import ItIcon from "@/components/IconComp/ItIcon.vue";
 import DesignIcon from "@/components/IconComp/DesignIcon.vue";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const imageLoading = ref(true);
 
 onMounted(() => {
-  AOS.init();
   // Preload profile image
   const img = new Image();
   img.src = "../../public/img/profile.svg";

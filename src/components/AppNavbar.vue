@@ -1,7 +1,7 @@
 <template>
   <div class="sticky top-0 bg-white/50 dark:bg-gray-900/50 backdrop-blur-md lg:mb-4 mb-0 z-50">
     <nav
-      class="h-[60px] lg:h-[90px] max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto flex justify-between items-center shadow-sm dark:shadow-gray-800"
+      class="h-[60px] lg:h-[90px] max-w-[95vw] sm:max-w-[754px] xl:max-w-[1240px] w-full mx-auto flex justify-between items-center dark:shadow-gray-800"
     >
       <div class="text-[#163537] dark:text-gray-200">
         <router-link to="/">

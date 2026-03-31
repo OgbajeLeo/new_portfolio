@@ -79,7 +79,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
-    return { top: 0 };
+    return { top: 0, behavior: 'smooth' };
   },
 });
 
