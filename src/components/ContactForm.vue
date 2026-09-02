@@ -260,7 +260,7 @@
 
               <button
                 type="submit"
-                class="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded-[30px] px-4 py-3 tracking-wide hover:scale-105 hover:shadow-md text-black dark:text-gray-200 font-bold bg-primary-gray dark:bg-gray-700 hover:bg-primary-gray dark:hover:bg-gray-600 transition-all"
+                class="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded-md border-2 border-r-4 border-b-4 border-[#011c2b] dark:border-gray-400 px-4 py-3 tracking-wide hover:scale-105 hover:shadow-md text-black dark:text-gray-200 font-bold bg-primary-gray dark:bg-gray-700 hover:bg-primary-gray dark:hover:bg-gray-600 transition-all"
               >
                 <svg
                   v-if="!isLoading"

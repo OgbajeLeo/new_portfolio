@@ -18,11 +18,12 @@
         <h2
           class="sm:text-[54px] text-[28px] font-bold text-[#163537] dark:text-gray-200"
         >
-          Frontend Developer
+          Frontend Engineer
         </h2>
         <p class="text-lg mt-4 text-[#56555e] dark:text-gray-400">
-          I specialize in crafting immersive user experiences using the latest
-          frontend technologies and frameworks to bring your vision to life.
+          <!-- come up with another state of the act tag line  -->      
+          I build engaging and user-friendly web applications using the latest
+          frontend technologies.
         </p>
 
         <!-- <div
@@ -32,7 +33,7 @@
           </div> -->
         <router-link
           to="/contact"
-          class="bg-primary-gray dark:bg-gray-700 cursor-pointer rounded-[30px] text-base md:text-lg font-bold text-[#163537] dark:text-gray-200 py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105 transition-all"
+          class="bg-primary-gray dark:bg-gray-700 cursor-pointer rounded-md border-2 border-r-4 border-b-4 border-[#163537] dark:border-gray-500 text-base md:text-lg font-bold text-[#163537] dark:text-gray-200 py-2.5 px-10 mt-4 w-fit hover:shadow-md hover:scale-105 transition-all"
         >
           Get in Touch
         </router-link>

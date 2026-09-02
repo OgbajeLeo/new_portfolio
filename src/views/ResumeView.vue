@@ -26,9 +26,9 @@
         <h1 class="sm:text-7xl text-4xl font-bold mt-6">{{ fullName }}</h1>
         <div class="flex justify-center items-center gap-4 mt-2">
           <a
-            href="../assets/OGBAJE LEO A.pdf"
-            class="w-[170px] lg:h-[48px] h-[38px] my-2 flex gap-4 justify-center items-center border-2 hover:shadow-lg hover:scale-105 rounded-[30px] cursor-pointer"
-            download="ogbajeleo"
+            href="/Ogbaje_Leo_Arome.pdf"
+            class="w-[170px] lg:h-[48px] h-[38px] my-2 flex gap-4 justify-center items-center border-2 border-r-4 border-b-4 border-black dark:border-gray-500 hover:shadow-lg hover:scale-105 rounded-md cursor-pointer"
+            download="Ogbaje_Leo_Arome"
             target="_blank"
             rel="noopener noreferrer"
             >Resume<span class="group-hover:rotate-270 duration-300">
@@ -102,7 +102,12 @@
 
       <div class="mb-6">
         <h2 class="text-2xl font-bold mb-2">Education</h2>
-        <p>{{ education }}</p>
+        <div v-for="edu in education" :key="edu.institution" class="mb-4">
+          <h3 class="text-xl font-bold">{{ edu.institution }}</h3>
+          <p class="text-lg font-semibold">{{ edu.discipline }}</p>
+          <p class="text-md">{{ edu.grade }}</p>
+          <p class="text-gray-600 dark:text-gray-400">{{ edu.section }}</p>
+        </div>
       </div>
 
       <div>
@@ -136,7 +141,7 @@ const goBack = () => {
 };
 
 const fullName = ref("Ogbaje Leo Arome");
-const jobTitle = ref("Frontend Developer");
+const jobTitle = ref("Frontend Engineer");
 const about = ref(
   `A highly committed, consistent, and resilient individual with a drive to create exceptional user experiences through the use of HTML, CSS, Javascript, ReactJs, VueJs, and other technologies seeking a position to leverage strong technical and problem-solving skills and extensive web development knowledge to achieve organizational efficiency, reduce page load speeds, and optimize user interfaces `
 );
@@ -156,6 +161,16 @@ const experiences = ref([
       "Implemented best practices in performance optimization, security, and accessibility to meet high standards of the fintech industry.",
       "Led the team in adopting agile methodologies, ensuring efficient project delivery while maintaining a strong focus on meeting client needs and business goals.",
       "Played a key role in scaling the platform to support a growing user base while maintaining a high level of code quality and system reliability.",
+    ],
+  },
+  {
+    company: "OnlyMed",
+    position: "Frontend Developer",
+    duration: "Aug 2025 - Dec 2025",
+    highlights: [
+      "Spearheaded the end-to-end development and seamless integration of a high-performance admin dashboard, drastically accelerating operational workflows.",
+      "Engineered dynamic, highly responsive user interfaces that empowered administrators with real-time data insights and streamlined management.",
+      "Architected robust, scalable frontend solutions, ensuring an exceptional, seamless experience for internal stakeholders.",
     ],
   },
   {
@@ -213,9 +228,15 @@ const experiences = ref([
     ],
   },
 ]);
-const education = ref(
-  `Federal Polytechnic Idah — HND, Computer Science (2019-2022)`
-);
+const education = ref([
+  {
+    institution: "Federal Polytechnic Idah",
+    discipline: "HND Computer Science",
+    grade: "Distinction",
+    section: "2019-2022",
+  },
+
+]);
 const strength = ref({
   leadership:
     "Led a team of developers and successfully delivered multiple projects on time and within budget.",

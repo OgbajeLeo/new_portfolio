@@ -110,19 +110,19 @@ const CodeIcon = defineComponent({
 
 const statistics = [
   {
-    value: "18+",
+    value: "80+",
     label: "Projects Completed",
     description: "Successfully delivered web applications",
     icon: ProjectsIcon,
   },
   {
-    value: "3+",
+    value: "4+",
     label: "Years Experience",
     description: "Building modern web solutions",
     icon: ExperienceIcon,
   },
   {
-    value: "10+",
+    value: "30+",
     label: "Happy Clients",
     description: "Satisfied with my work",
     icon: ClientsIcon,

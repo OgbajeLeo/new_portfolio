@@ -48,7 +48,7 @@
           >
             <div
               v-if="card.github != '/'"
-              class="flex justify-start gap-3 items-center border dark:border-gray-600 shadow-md shadow-[#333] dark:shadow-gray-900 hover:shadow-none bg-transparent dark:bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-300 text-sm cursor-pointer"
+              class="flex justify-start gap-3 items-center border-2 border-r-4 border-b-4 border-[#163537] dark:border-gray-500 shadow-md shadow-[#333] dark:shadow-gray-900 hover:shadow-none bg-transparent dark:bg-transparent font-light py-2 px-6 rounded-md text-black dark:text-gray-300 text-sm cursor-pointer"
             >
               <a :href="card.github" class="">Github</a>
               <svg
@@ -68,7 +68,7 @@
             </div>
             <div
               v-else
-              class="flex justify-start gap-3 items-center border dark:border-gray-600 hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-400 text-sm cursor-not-allowed"
+              class="flex justify-start gap-3 items-center border dark:border-gray-600 hover:shadow-none bg-transparent font-light py-2 px-6 rounded-md text-black dark:text-gray-400 text-sm cursor-not-allowed"
             >
               <div class="">Github</div>
               <svg
@@ -87,7 +87,7 @@
               </svg>
             </div>
             <div
-              class="flex justify-start gap-3 items-center border dark:border-gray-600 shadow-[#333] dark:shadow-gray-900 shadow-md hover:shadow-none bg-transparent font-light py-2 px-6 rounded-[30px] text-black dark:text-gray-300 text-sm cursor-pointer"
+              class="flex justify-start gap-3 items-center border-2 border-r-4 border-b-4 border-[#163537] dark:border-gray-500 shadow-[#333] dark:shadow-gray-900 shadow-md hover:shadow-none bg-transparent font-light py-2 px-6 rounded-md text-black dark:text-gray-300 text-sm cursor-pointer"
             >
               <a :href="card.live" class="" target="_blank">Live</a>
               <svg
